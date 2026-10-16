@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cmfkiyr0fruic"]
+
+[ext_resource type="Script" uid="uid://c715xdv6bhoac" path="res://Script/actual_menu.gd" id="1_5a6at"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=364866189]
+script = ExtResource("1_5a6at")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1767798194]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5292348, 0.8305425, 0.95583755, 1)
+
+[node name="bnt_guest" type="Button" parent="ColorRect" unique_id=1154909912]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22000001
+anchor_top = 0.5
+anchor_right = 0.771
+anchor_bottom = 0.79800004
+offset_left = 0.5599823
+offset_right = -0.1920166
+offset_bottom = -0.104003906
+text = "FAI DA GUEST"
+
+[node name="bnt_host" type="Button" parent="ColorRect" unique_id=1769148366]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22000001
+anchor_top = 0.10300001
+anchor_right = 0.771
+anchor_bottom = 0.40300003
+offset_left = 0.5599823
+offset_top = 0.2559967
+offset_right = -0.1920166
+offset_bottom = -0.14401245
+text = "FAI DA HOST"
+
+[connection signal="pressed" from="ColorRect/bnt_guest" to="." method="_on_bnt_guest_pressed"]
+[connection signal="pressed" from="ColorRect/bnt_host" to="." method="_on_bnt_host_pressed"]

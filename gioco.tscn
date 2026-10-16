@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dsbbmd7642sri"]
+
+[ext_resource type="Script" uid="uid://dokv2x3i48ga5" path="res://Script/gioco.gd" id="1_wo78w"]
+[ext_resource type="PackedScene" uid="uid://xb5me66b6rqi" path="res://mappa.tscn" id="2_wo78w"]
+
+[node name="Gioco" type="Node3D" unique_id=37878824]
+script = ExtResource("1_wo78w")
+
+[node name="Mappa" parent="." unique_id=891395470 instance=ExtResource("2_wo78w")]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1555866858]
+_spawnable_scenes = PackedStringArray("uid://c3tm7i6bdye2j")
+spawn_path = NodePath("../Players")
+
+[node name="Players" type="Node" parent="." unique_id=1822133807]

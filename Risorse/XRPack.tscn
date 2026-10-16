@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c3tm7i6bdye2j"]
+
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="1_qcubn"]
+[ext_resource type="PackedScene" uid="uid://16colgxrw27d" path="res://addons/godot-xr-tools/hands/model/Hand_low_L.gltf" id="2_3hvn2"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="3_uw8su"]
+[ext_resource type="PackedScene" uid="uid://cjrac51wst3tu" path="res://addons/godot-xr-tools/hands/model/Hand_low_R.gltf" id="4_w5ffl"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="5_qe76w"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_j3ntm"]
+[ext_resource type="PackedScene" uid="uid://irtsehu5tmf7" path="res://Risorse/voip_controller.tscn" id="7_id3pm"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_g4v7s"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_id3pm"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="XROrigin3D" type="XROrigin3D" unique_id=1288032224]
+
+[node name="LeftHand" type="XRController3D" parent="." unique_id=46582890]
+tracker = &"left_hand"
+
+[node name="MovementDirect" parent="LeftHand" unique_id=155904359 instance=ExtResource("1_qcubn")]
+strafe = true
+
+[node name="Skeleton3D" type="Skeleton3D" parent="LeftHand" unique_id=1314469183]
+
+[node name="Left" type="XRHandModifier3D" parent="LeftHand/Skeleton3D" unique_id=1687182385]
+
+[node name="Hand_low_L" parent="LeftHand/Skeleton3D/Left" unique_id=1941527687 instance=ExtResource("2_3hvn2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.09)
+
+[node name="XRAnchor3D" type="XRAnchor3D" parent="." unique_id=1596356912]
+tracker = &"head"
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=424121846]
+current = true
+
+[node name="RightHand" type="XRController3D" parent="." unique_id=461082718]
+tracker = &"right_hand"
+
+[node name="MovementTurn" parent="RightHand" unique_id=30609059 instance=ExtResource("3_uw8su")]
+turn_mode = 1
+step_turn_angle = 30.0
+
+[node name="Skeleton3D" type="Skeleton3D" parent="RightHand" unique_id=919387590]
+
+[node name="Right" type="XRHandModifier3D" parent="RightHand/Skeleton3D" unique_id=2034283325]
+hand_tracker = &"/user/hand_tracker/right"
+
+[node name="Hand_low_R" parent="RightHand/Skeleton3D/Right" unique_id=696089245 instance=ExtResource("4_w5ffl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.09)
+
+[node name="FunctionPointer" parent="RightHand" unique_id=968907082 instance=ExtResource("5_qe76w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
+
+[node name="PlayerBody" parent="." unique_id=1676752254 instance=ExtResource("6_j3ntm")]
+
+[node name="ProximityChat" type="AudioStreamPlayer3D" parent="." unique_id=1407305360]
+stream = SubResource("AudioStreamGenerator_g4v7s")
+autoplay = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=568471909]
+replication_config = SubResource("SceneReplicationConfig_id3pm")
+
+[node name="VOIP_controller" parent="." unique_id=660892812 node_paths=PackedStringArray("output") instance=ExtResource("7_id3pm")]
+output = NodePath("../ProximityChat")

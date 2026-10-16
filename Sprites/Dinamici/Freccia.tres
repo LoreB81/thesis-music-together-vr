@@ -1,0 +1,102 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bvf0nj51p4b5j"]
+
+[ext_resource type="Texture2D" uid="uid://bj6ut16yxow1d" path="res://Sprites/Dinamici/Arrow_Sprite.png" id="1_k05u3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwd8t"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvvj7"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55qfn"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(160, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03mpo"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nabn"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km35p"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(224, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gorte"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im6gl"]
+atlas = ExtResource("1_k05u3")
+region = Rect2(192, 0, 32, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwd8t")
+}],
+"loop": 1,
+"name": &"B",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvvj7")
+}],
+"loop": 1,
+"name": &"BL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55qfn")
+}],
+"loop": 1,
+"name": &"BR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03mpo")
+}],
+"loop": 1,
+"name": &"F",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nabn")
+}],
+"loop": 1,
+"name": &"FL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km35p")
+}],
+"loop": 1,
+"name": &"FR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gorte")
+}],
+"loop": 1,
+"name": &"L",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im6gl")
+}],
+"loop": 1,
+"name": &"R",
+"speed": 5.0
+}]

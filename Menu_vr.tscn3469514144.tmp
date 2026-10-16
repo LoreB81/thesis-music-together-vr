@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://srr8jlce1fly"]
+
+[ext_resource type="Script" uid="uid://dyutbb3ni1s7a" path="res://menu_vr.gd" id="1_og227"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t0cuh"]
+sky_top_color = Color(0.5318, 0.26716706, 0.8737408, 1)
+sky_horizon_color = Color(0.730869, 0.68554103, 0.8724118, 1)
+ground_bottom_color = Color(0.2112039, 0.29452485, 0.43543425, 1)
+ground_horizon_color = Color(0.730869, 0.68554103, 0.8724118, 1)
+
+[sub_resource type="Sky" id="Sky_og227"]
+sky_material = SubResource("ProceduralSkyMaterial_t0cuh")
+
+[sub_resource type="Environment" id="Environment_cqsk4"]
+background_mode = 2
+sky = SubResource("Sky_og227")
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_og227"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g4v7s"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t0cuh"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="VRMenu" type="Node3D" unique_id=1701315554]
+script = ExtResource("1_og227")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1762998022]
+environment = SubResource("Environment_cqsk4")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1083932275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6080844, 0)
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D" unique_id=1362733267]
+tracker = &"left_hand"
+
+[node name="Skeleton3D" type="Skeleton3D" parent="XROrigin3D/LeftHand" unique_id=646880674]
+
+[node name="Left" type="XRHandModifier3D" parent="XROrigin3D/LeftHand/Skeleton3D" unique_id=444266934]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftHand/Skeleton3D/Left" unique_id=1467558277]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.1)
+mesh = SubResource("SphereMesh_og227")
+
+[node name="XRAnchor3D" type="XRAnchor3D" parent="XROrigin3D" unique_id=2009600562]
+tracker = &"head"
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1180934308]
+current = true
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=1851605164]
+tracker = &"right_hand"
+
+[node name="Skeleton3D" type="Skeleton3D" parent="XROrigin3D/RightHand" unique_id=148703376]
+
+[node name="Right" type="XRHandModifier3D" parent="XROrigin3D/RightHand/Skeleton3D" unique_id=724187419]
+hand_tracker = &"/user/hand_tracker/right"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightHand/Skeleton3D/Right" unique_id=430076899]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.1)
+mesh = SubResource("SphereMesh_g4v7s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=783212662]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=94071619]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1621038868]
+shape = SubResource("ConcavePolygonShape3D_t0cuh")

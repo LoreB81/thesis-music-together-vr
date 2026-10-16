@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ci75lonkfkk7e"]
+
+[ext_resource type="Script" uid="uid://dmitpx8chggh8" path="res://Script/avvio.gd" id="1_dxn3n"]
+
+[node name="Avvio" type="Node" unique_id=629965199]
+script = ExtResource("1_dxn3n")

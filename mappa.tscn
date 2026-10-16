@@ -1,0 +1,836 @@
+[gd_scene format=3 uid="uid://xb5me66b6rqi"]
+
+[ext_resource type="Texture2D" uid="uid://bj6ut16yxow1d" path="res://Sprites/Dinamici/Arrow_Sprite.png" id="4_3t2l2"]
+[ext_resource type="Texture2D" uid="uid://duxjvrep42e0w" path="res://Sprites/Dinamici/Fontanta.png" id="8_mpukp"]
+[ext_resource type="Texture2D" uid="uid://o28py7llvb31" path="res://Sprites/Siepe.png" id="10_0tg17"]
+[ext_resource type="Texture2D" uid="uid://cbmgmopo7sqdj" path="res://Sprites/Palma.png" id="11_acm0i"]
+[ext_resource type="Texture2D" uid="uid://ytvnd7oohlwf" path="res://Sprites/MicrofonoPalco.png" id="13_0kr23"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dem48"]
+sky_top_color = Color(0.366098, 0.111518, 0.704, 1)
+sky_horizon_color = Color(0.897117, 0.228586, 0.316576, 1)
+sky_curve = 0.219613
+ground_bottom_color = Color(0.443137, 0.117647, 0.968627, 1)
+ground_horizon_color = Color(0.631373, 0, 0.635294, 1)
+sun_curve = 0.332871
+
+[sub_resource type="Sky" id="Sky_4muuu"]
+sky_material = SubResource("ProceduralSkyMaterial_dem48")
+
+[sub_resource type="Environment" id="Environment_8eu3w"]
+background_mode = 2
+sky = SubResource("Sky_4muuu")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_4yysh"]
+radius = 1.0
+height = 1.9
+
+[sub_resource type="TorusMesh" id="TorusMesh_3th0n"]
+inner_radius = 1.303
+outer_radius = 1.728
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_8eu3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwd8t"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvvj7"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55qfn"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(160, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03mpo"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nabn"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km35p"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(224, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gorte"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im6gl"]
+atlas = ExtResource("4_3t2l2")
+region = Rect2(192, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ktx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwd8t")
+}],
+"loop": 1,
+"name": &"B",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvvj7")
+}],
+"loop": 1,
+"name": &"BL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55qfn")
+}],
+"loop": 1,
+"name": &"BR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03mpo")
+}],
+"loop": 1,
+"name": &"F",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nabn")
+}],
+"loop": 1,
+"name": &"FL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km35p")
+}],
+"loop": 1,
+"name": &"FR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gorte")
+}],
+"loop": 1,
+"name": &"L",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im6gl")
+}],
+"loop": 1,
+"name": &"R",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p52r"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tg17"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(96, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acm0i"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(256, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el4ri"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t2l2"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(224, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kr23"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(64, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ktx1"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2owph"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(128, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl13n"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(288, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q54h"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k03t"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn03m"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(160, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rffab"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbd8s"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(32, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aypw4"]
+atlas = ExtResource("8_mpukp")
+region = Rect2(192, 48, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oi7lj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p52r")
+}],
+"loop": 1,
+"name": &"BL_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tg17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acm0i")
+}],
+"loop": 1,
+"name": &"BL_Running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el4ri")
+}],
+"loop": 1,
+"name": &"B_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t2l2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kr23")
+}],
+"loop": 1,
+"name": &"B_Running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ktx1")
+}],
+"loop": 1,
+"name": &"FL_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2owph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl13n")
+}],
+"loop": 1,
+"name": &"FL_Running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q54h")
+}],
+"loop": 1,
+"name": &"F_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k03t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn03m")
+}],
+"loop": 1,
+"name": &"F_Running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rffab")
+}],
+"loop": 1,
+"name": &"L_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbd8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aypw4")
+}],
+"loop": 1,
+"name": &"L_Running",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mpukp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c4ipf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4muuu"]
+albedo_color = Color(0.976471, 0.866667, 0.917647, 1)
+albedo_texture = SubResource("PlaceholderTexture2D_c4ipf")
+albedo_texture_force_srgb = true
+emission_enabled = true
+emission = Color(0.999985, 0.888232, 0.869182, 1)
+emission_energy_multiplier = 0.1
+uv1_scale = Vector3(50, 50, 50)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0pjtc"]
+material = SubResource("StandardMaterial3D_4muuu")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4qhbo"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_acm0i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4ri"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("10_0tg17")
+uv1_scale = Vector3(15.96, 1, 1)
+texture_filter = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3t2l2"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0tg17"]
+properties/0/path = NodePath("Fontanella/8-WayAnimatedSprite:action")
+properties/0/spawn = true
+properties/0/replication_mode = 2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 3.6904297
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8wo2"]
+albedo_color = Color(0.32150483, 0.3286222, 0.3217033, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_acm0i"]
+data = PackedVector3Array(-6.1559906, -0.29675293, 3.0941162, -6.1559906, -0.29675293, -3.0941162, -6.1559906, 0.29675293, -3.0941162, 6.1559906, -0.29675293, -3.0941162, -6.1559906, -0.29675293, -3.0941162, -6.1559906, -0.29675293, 3.0941162, -6.1559906, 0.29675293, -3.0941162, -6.1559906, -0.29675293, -3.0941162, 6.1559906, -0.29675293, -3.0941162, -6.1559906, 0.29675293, -3.0941162, -6.1559906, 0.29675293, 3.0941162, -6.1559906, -0.29675293, 3.0941162, -6.1559906, -0.29675293, 3.0941162, -6.1559906, 0.29675293, 3.0941162, 6.1559906, 0.29675293, 3.0941162, 6.1559906, 0.29675293, 3.0941162, -6.1559906, 0.29675293, 3.0941162, -6.1559906, 0.29675293, -3.0941162, -6.1559906, -0.29675293, 3.0941162, 6.1559906, -0.29675293, 3.0941162, 6.1559906, -0.29675293, -3.0941162, 6.1559906, 0.29675293, 3.0941162, 6.1559906, -0.29675293, 3.0941162, -6.1559906, -0.29675293, 3.0941162, 6.1559906, -0.29675293, -3.0941162, 6.1559906, -0.29675293, 3.0941162, 6.1559906, 0.29675293, 3.0941162, 6.1559906, -0.29675293, -3.0941162, 6.1559906, 0.29675293, -3.0941162, -6.1559906, 0.29675293, -3.0941162, -6.1559906, 0.29675293, -3.0941162, 6.1559906, 0.29675293, -3.0941162, 6.1559906, 0.29675293, 3.0941162, 6.1559906, 0.29675293, 3.0941162, 6.1559906, 0.29675293, -3.0941162, 6.1559906, -0.29675293, -3.0941162)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t1r3"]
+albedo_color = Color(0.28637317, 0.29874897, 0.27679282, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_el4ri"]
+data = PackedVector3Array(-1, 0, 0, -1, 0, -1.24, 1.0027, 0.68869996, -1.24, -1, 0, -1.24, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, -1.24, -1, 0, -1.24, 1.0027, 0.68869996, -1.24, -1, 0, -1.24, 1, 0, -1.24, 1, 0, 0, -1, 0, 0, 1.0027, 0.68869996, 0, 1, 0, -1.24, 1, 0, 0, 1.0027, 0.68869996, 0, 1.0027, 0.68869996, 0, 1.0027, 0.68869996, -1.24, 1, 0, -1.24, 1.0027, 0.68869996, -1.24, 1.0027, 0.68869996, 0, -1, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(12.261765, 5.0007935, 6.138397)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqt2m"]
+albedo_color = Color(0.41576093, 0.10231418, 0.13033128, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi7lj"]
+atlas = ExtResource("13_0kr23")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkoh6"]
+atlas = ExtResource("13_0kr23")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e76x"]
+atlas = ExtResource("13_0kr23")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10xkv"]
+atlas = ExtResource("13_0kr23")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk03q"]
+atlas = ExtResource("13_0kr23")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi7lj")
+}],
+"loop": 1,
+"name": &"B",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkoh6")
+}],
+"loop": 1,
+"name": &"BL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e76x")
+}],
+"loop": 1,
+"name": &"F",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10xkv")
+}],
+"loop": 1,
+"name": &"FL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk03q")
+}],
+"loop": 1,
+"name": &"L",
+"speed": 5.0
+}]
+
+[node name="Mappa" type="Node3D" unique_id=891395470]
+
+[node name="Sky" type="Node3D" parent="." unique_id=1536961726]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sky" unique_id=2114501855]
+environment = SubResource("Environment_8eu3w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Sky" unique_id=99827053]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_color = Color(0.693229, 0.352423, 0.490804, 1)
+shadow_enabled = true
+
+[node name="UomoLowPoly" parent="." unique_id=2103566448]
+transform = Transform3D(-0.165, 0, -1.4424758e-08, 0, 0.165, 0, 1.4424758e-08, 0, -0.165, -5.345023, -0.839, 23.797539)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1066117603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03327751, 1.40915, 22.190918)
+mesh = SubResource("SphereMesh_4yysh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=960925287]
+transform = Transform3D(1, 0, 0, 0, 0.506199, -0.135275, 0, 0.0621534, 1.10173, 0, 0, 0)
+mesh = SubResource("TorusMesh_3th0n")
+
+[node name="AudioSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1592036310]
+replication_config = SubResource("SceneReplicationConfig_8eu3w")
+
+[node name="Freccia3D" type="Node3D" parent="." unique_id=260738743]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -3.3859806)
+
+[node name="Animated_Sprite" type="AnimatedSprite3D" parent="Freccia3D" unique_id=874747293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2714605, 2.03015)
+pixel_size = 0.1
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_5ktx1")
+animation = &"B"
+
+[node name="8-WayAnimatedSprite" parent="Freccia3D" unique_id=935540163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2714605, 1.9893804)
+
+[node name="Fontanella" type="Node3D" parent="." unique_id=1406055695]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 0, 0.87027967, 8.016176)
+
+[node name="8-WayAnimatedSprite" parent="Fontanella" unique_id=416721196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3023082, 0)
+action = "_Idle"
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Fontanella" unique_id=1233860902]
+pixel_size = 0.05
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_oi7lj")
+animation = &"F_Idle"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fontanella" unique_id=1618306937]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fontanella/StaticBody3D" unique_id=1165286391]
+shape = SubResource("CylinderShape3D_mpukp")
+
+[node name="Audios" type="Node" parent="." unique_id=352579477]
+
+[node name="Audio1" type="AudioStreamPlayer3D" parent="Audios" unique_id=589874675]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8798926, 1.8491902, 21.923721)
+volume_db = 1.0
+max_distance = 30.0
+
+[node name="Audio2" type="AudioStreamPlayer3D" parent="Audios" unique_id=1118776541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037877083, 1.3002, 22.190918)
+max_distance = 30.0
+
+[node name="Confini" type="Node" parent="." unique_id=2010288840]
+
+[node name="Floor" type="MeshInstance3D" parent="Confini" unique_id=371196865]
+transform = Transform3D(43.97368, 0, 0, 0, 1, 0, 0, 0, 42.98839, 0.05848694, 0.0973943, 0.07581711)
+mesh = SubResource("PlaneMesh_0pjtc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Confini/Floor" unique_id=844039614]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confini/Floor/StaticBody3D" unique_id=2028821373]
+shape = SubResource("ConcavePolygonShape3D_4qhbo")
+
+[node name="Siepe" type="MeshInstance3D" parent="Confini" unique_id=340488820]
+transform = Transform3D(-42.93, -1.1102693e-07, 8.429945e-15, 0, -5.5513464e-08, -2.206, 3.75306e-06, -1.27, 9.642733e-08, -0.016, 2.2949715, 42.746)
+mesh = SubResource("PlaneMesh_acm0i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_el4ri")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Confini/Siepe" unique_id=1577391731]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confini/Siepe/StaticBody3D" unique_id=1686100972]
+shape = SubResource("ConcavePolygonShape3D_3t2l2")
+
+[node name="Siepe2" type="MeshInstance3D" parent="Confini" unique_id=546332064]
+transform = Transform3D(-1.8765301e-06, -1.2700001, 9.642733e-08, 0, -5.5513468e-08, -2.206, 42.930004, -5.5513468e-08, 4.2149723e-15, 41.257, 2.295, 0.047)
+mesh = SubResource("PlaneMesh_acm0i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_el4ri")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Confini/Siepe2" unique_id=94533211]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confini/Siepe2/StaticBody3D" unique_id=1323352114]
+shape = SubResource("ConcavePolygonShape3D_3t2l2")
+
+[node name="Siepe3" type="MeshInstance3D" parent="Confini" unique_id=1077917940]
+transform = Transform3D(-1.87653e-06, 1.27, -9.642733e-08, 0, -5.5513464e-08, -2.206, -42.93, -5.5513464e-08, 4.2149723e-15, -42.975857, 2.2949715, 0.0029335022)
+mesh = SubResource("PlaneMesh_acm0i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_el4ri")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Confini/Siepe3" unique_id=1611007071]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confini/Siepe3/StaticBody3D" unique_id=444767141]
+shape = SubResource("ConcavePolygonShape3D_3t2l2")
+
+[node name="Siepe4" type="MeshInstance3D" parent="Confini" unique_id=316511857]
+transform = Transform3D(42.93, 0, 0, 0, -5.5513464e-08, -2.206, 0, 1.27, -9.642733e-08, -0.016, 2.2949715, -41.688942)
+mesh = SubResource("PlaneMesh_acm0i")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_el4ri")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Confini/Siepe4" unique_id=616642404]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Confini/Siepe4/StaticBody3D" unique_id=583995561]
+shape = SubResource("ConcavePolygonShape3D_3t2l2")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=398365003]
+replication_config = SubResource("SceneReplicationConfig_0tg17")
+
+[node name="Palme" type="Node" parent="." unique_id=893874799]
+
+[node name="Palma" type="Node3D" parent="Palme" unique_id=391028152]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 33.83508, 0.87027967, -36.40327)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma" unique_id=396133123]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma" unique_id=1201794321]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma/StaticBody3D" unique_id=2052886199]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma2" type="Node3D" parent="Palme" unique_id=202877661]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 33.83508, 0.87027967, 33.441975)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma2" unique_id=1375694407]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma2" unique_id=1057048598]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma2/StaticBody3D" unique_id=1740131291]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma3" type="Node3D" parent="Palme" unique_id=1383899312]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -39.049427, 0.87027967, -36.40327)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma3" unique_id=1497915700]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma3" unique_id=154718267]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma3/StaticBody3D" unique_id=1144738752]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma4" type="Node3D" parent="Palme" unique_id=837376551]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -38.416973, 0.87027967, 37.15903)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma4" unique_id=1757630573]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma4" unique_id=1090304018]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma4/StaticBody3D" unique_id=623902708]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma5" type="Node3D" parent="Palme" unique_id=359049961]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 5.9407463, 0.87027967, -22.285427)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma5" unique_id=1114516181]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma5" unique_id=2065176668]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma5/StaticBody3D" unique_id=1044831628]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma6" type="Node3D" parent="Palme" unique_id=892104644]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 22.408024, 0.87027967, 3.487854)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma6" unique_id=1493561859]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma6" unique_id=2098322323]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma6/StaticBody3D" unique_id=2013427101]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma7" type="Node3D" parent="Palme" unique_id=634966163]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -32.29764, 0.87027967, -10.820881)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma7" unique_id=1023131804]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma7" unique_id=1118008996]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma7/StaticBody3D" unique_id=1820647518]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma8" type="Node3D" parent="Palme" unique_id=2064257212]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -12.278152, 0.87027967, -25.44899)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma8" unique_id=678349452]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma8" unique_id=2061001899]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma8/StaticBody3D" unique_id=101760563]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma9" type="Node3D" parent="Palme" unique_id=867036276]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -27.96178, 0.87027967, 15.095795)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma9" unique_id=438009130]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma9" unique_id=1600904870]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma9/StaticBody3D" unique_id=1529132360]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma10" type="Node3D" parent="Palme" unique_id=1898290868]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 6.658024, 0.87027967, 18.548515)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma10" unique_id=1485514210]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma10" unique_id=1791302300]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma10/StaticBody3D" unique_id=790240717]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma11" type="Node3D" parent="Palme" unique_id=246683411]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -19.044668, 0.87027967, -2.3031273)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma11" unique_id=168937573]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma11" unique_id=1990920915]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma11/StaticBody3D" unique_id=1771200455]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma12" type="Node3D" parent="Palme" unique_id=1683777773]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 13.063255, 0.87027967, 29.70599)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma12" unique_id=2075440226]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma12" unique_id=34925284]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma12/StaticBody3D" unique_id=1910571275]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma13" type="Node3D" parent="Palme" unique_id=966180157]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -2.0703392, 0.87027967, -36.40327)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma13" unique_id=510174702]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma13" unique_id=1540187800]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma13/StaticBody3D" unique_id=1483478205]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma14" type="Node3D" parent="Palme" unique_id=603742310]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -13.624985, 0.87027967, 33.92583)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma14" unique_id=217092308]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma14" unique_id=1739501863]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma14/StaticBody3D" unique_id=1714284518]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma15" type="Node3D" parent="Palme" unique_id=1030658295]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, 26.69978, 0.87027967, -13.437141)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma15" unique_id=1828471104]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma15" unique_id=529910328]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma15/StaticBody3D" unique_id=1433419992]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palma16" type="Node3D" parent="Palme" unique_id=1643173851]
+transform = Transform3D(-0.715, 0, -1.07961995e-07, 0, 0.715, 0, 1.07961995e-07, 0, -0.715, -23.714258, 0.87027967, -32.09813)
+
+[node name="Sprite3D" type="Sprite3D" parent="Palme/Palma16" unique_id=1054167270]
+transform = Transform3D(5.315, 0, 7.5530694e-14, 0, 5.315, 0, -7.5530694e-14, 0, 5.315, 0, 2.44, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("11_acm0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palme/Palma16" unique_id=1078462828]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palme/Palma16/StaticBody3D" unique_id=1729752738]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0, 0.84521484, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Palco" type="Node3D" parent="." unique_id=545044214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.418814)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Palco" unique_id=1429970499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39801538, 0)
+size = Vector3(12.311981, 0.59350586, 6.1882324)
+material = SubResource("StandardMaterial3D_n8wo2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palco/CSGBox3D" unique_id=1678886629]
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Palco/CSGBox3D/StaticBody3D" unique_id=1874208049]
+shape = SubResource("ConcavePolygonShape3D_acm0i")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Palco" unique_id=1964818588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.163741, 0.03406626, 0)
+polygon = PackedVector2Array(-1, 0, 1, 0, 1.0026865, 0.6886524)
+depth = 1.24
+material = SubResource("StandardMaterial3D_5t1r3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Palco/CSGPolygon3D" unique_id=1787547343]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palco/CSGPolygon3D/StaticBody3D" unique_id=1407047419]
+shape = SubResource("ConcavePolygonShape3D_el4ri")
+
+[node name="Area3D" type="Area3D" parent="Palco" unique_id=1523816475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5492117, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Palco/Area3D" unique_id=1126947719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021980286, 2.0003967, 0.9898224)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Palco" unique_id=460504035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0061035156, 3.3054903, -2.8930511)
+size = Vector3(12.269043, 5.256714, 0.39404297)
+material = SubResource("StandardMaterial3D_dqt2m")
+
+[node name="8-WayAnimatedSprite" parent="Palco" unique_id=235677367]
+transform = Transform3D(2.935, 0, 0, 0, 2.935, 0, 0, 0, 2.935, 0, 1.8400834, 2.336319)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Palco/8-WayAnimatedSprite" unique_id=654768260]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, -0.10512555, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"L"
+frame_progress = 0.037528053
+
+[connection signal="body_entered" from="Palco/Area3D" to="Palco/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Palco/Area3D" to="Palco/Area3D" method="_on_body_exited"]
